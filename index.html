@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba DeepSeek V3 en Español gratis - Chatea con IA avanzada</title>
+    <meta name="description" content="Explora las capacidades de DeepSeek V3 de forma gratuita. Participa en conversaciones avanzadas de IA, genera texto, analiza imágenes y experimenta el dibujo impulsado por IA.">
+    <link rel="canonical" href="https_YOUR_DOMAIN_COM/">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/制作图标.png">
+    <link rel="alternate" hreflang="es" href="http://www.erohmed.com"/>
+
+</head>
+<body>
+    <div id="vanta-bg"></div>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>DeepSeek V3</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="login.html" class="nav-auth-link">Iniciar Sesión/Registrarse</a>
+                <a href="index.html" class="active">Interfaz de Chat</a>
+                <a href="feedback.html">Comentarios de Usuarios</a>
+            </nav>
+            <div class="chat-history">
+                <h3>Historial de Chat</h3>
+                <ul id="history-list">
+                    <!-- 历史对话将通过JS动态添加 -->
+                    <li><a href="#">Chat 1 - Funciones del Modelo V3</a></li>
+                    <li><a href="#">Chat 2 - Juego de Ritmo Musical</a></li>
+                </ul>
+            </div>
+            <button class="new-chat-btn" id="newChatBtnSidebar">Nuevo Chat</button>
+        </aside>
+
+        <main class="chat-interface">
+            <div class="content-wrapper">
+                <header class="chat-header">
+                    <h1>Prueba DeepSeek V3 en Español gratis</h1>
+                    <p>¡Puedo ayudarte a escribir código, leer archivos, crear contenido diverso, solo dame tus tareas!</p>
+                </header>
+
+                <div class="message-area" id="messageArea">
+                    <!-- 对话消息将显示在这里 -->
+                </div>
+                <div id="image-aspect-ratio-selector" class="image-aspect-ratio-selector" style="display: none;">
+                    <h4>Seleccionar Relación de Aspecto:</h4>
+                    <button class="aspect-ratio-btn" data-ratio="1:1">1:1</button>
+                    <button class="aspect-ratio-btn" data-ratio="3:4">3:4</button>
+                    <button class="aspect-ratio-btn" data-ratio="4:3">4:3</button>
+                    <button class="aspect-ratio-btn" data-ratio="9:16">9:16</button>
+                    <button class="aspect-ratio-btn" data-ratio="16:9">16:9</button>
+                </div>
+                <div class="chat-input-area">
+                    <button id="uploadImageBtn" class="upload-btn" aria-label="Subir Imagen">📎</button>
+                    <div id="imagePreviewContainer" class="image-preview-container">
+                        <!-- 上传的图片预览将显示在这里 -->
+                    </div>
+                    <textarea id="chatInput" placeholder="Enviar un mensaje a DeepSeek"></textarea>
+                    <button id="sendMessageBtn" class="send-btn" aria-label="Enviar Mensaje">⬆️</button>
+                </div>
+
+                <div class="use-cases">
+                    <button class="use-case-btn" data-case="general">
+                        <img src="images/通用对话.png" alt="Icono de Chat General" class="use-case-icon-img">
+                        <span class="use-case-title">Chat General</span>
+                        <span class="use-case-description">Responder preguntas, proporcionar información</span>
+                    </button>
+                    <button class="use-case-btn" data-case="education">
+                        <img src="images/教育辅导.png" alt="Icono de Educación" class="use-case-icon-img">
+                        <span class="use-case-title">Educación</span>
+                        <span class="use-case-description">Explicar conceptos, ayudar al aprendizaje</span>
+                    </button>
+                    <button class="use-case-btn" data-case="translation">
+                        <img src="images/翻译助手.png" alt="Icono de Traducción" class="use-case-icon-img">
+                        <span class="use-case-title">Traducción</span>
+                        <span class="use-case-description">Traducción multilingüe</span>
+                    </button>
+                    <button class="use-case-btn" data-case="data_analysis">
+                        <img src="images/数据分析.png" alt="Icono de Análisis de Datos" class="use-case-icon-img">
+                        <span class="use-case-title">Análisis de Datos</span>
+                        <span class="use-case-description">Datos perspicaces, apoyo a decisiones</span>
+                    </button>
+                    <button class="use-case-btn" data-case="screenwriting">
+                        <img src="images/影视剧本.png" alt="Icono de Escritura de Guiones" class="use-case-icon-img">
+                        <span class="use-case-title">Escritura de Guiones</span>
+                        <span class="use-case-description">Ideas creativas, escritura de guiones</span>
+                    </button>
+                    <button class="use-case-btn" data-case="media_ops">
+                        <img src="images/媒体运营.png" alt="Icono de Operaciones de Medios" class="use-case-icon-img">
+                        <span class="use-case-title">Operaciones de Medios</span>
+                        <span class="use-case-description">Planificación de contenido, marketing</span>
+                    </button>
+                    <button class="use-case-btn" data-case="image_parsing">
+                        <img src="images/图像解析.png" alt="Icono de Análisis de Imágenes" class="use-case-icon-img">
+                        <span class="use-case-title">Imagen a Prompt</span>
+                        <span class="use-case-description">Entender imágenes, extraer información</span>
+                    </button>
+                    <button class="use-case-btn" data-case="ai_drawing">
+                        <img src="images/AI绘图.png" alt="Icono de Dibujo IA" class="use-case-icon-img">
+                        <span class="use-case-title">Dibujo IA</span>
+                        <span class="use-case-description">Texto a imagen, creatividad sin fin</span>
+                    </button>
+                    <button class="use-case-btn" data-case="image_to_image">
+                        <img src="images/以图生图.png" alt="Icono de Imagen a Imagen" class="use-case-icon-img">
+                        <span class="use-case-title">Imagen a Imagen</span>
+                        <span class="use-case-description">Recreación de imágenes, transferencia de estilo</span>
+                    </button>
+                </div>
+                <div id="prompt-suggestions-area" class="prompt-suggestions">
+                    <!-- Prompt suggestions will be dynamically added here -->
+                </div>
+
+                <!-- New: Image Aspect Ratio Selector -->
+
+            </div>
+            <footer>
+                <p><a href="https://beian.miit.gov.cn" rel="nofollow">渝ICP备2025053179号</a> | Contáctanos: <a href="mailto:ytsgabcde49@2925.com">ytsgabcde49@2925.com</a></p>
+                <hr class="footer-divider">
+                <p class="footer-ai-notice">Contenido generado por IA, no se puede garantizar la precisión, solo como referencia. <a href="privacy.html">Reglas de Protección de Información Personal</a></p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+    <script>
+        VANTA.BIRDS({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            backgroundColor: 0xf7f7f7,
+            speedLimit: 3.00,
+            color1: 0x1b2996,
+            color2: 0x1db0d2,
+        })
+    </script>
+</body>
+</html> 
